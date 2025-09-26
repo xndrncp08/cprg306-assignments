@@ -1,6 +1,6 @@
 import Item from "./item.js";
 
-const itemList = () => {
+export default function ItemList() {
   const item1 = {
     name: "milk, 4 L 🥛",
     quantity: 1,
@@ -72,12 +72,36 @@ const itemList = () => {
     quantity: 4,
     category: "household",
   };
-};
 
-
-const items = [
+  const items = [
     item1,
     item2,
-    
+    item3,
+    item4,
+    item5,
+    item6,
+    item7,
+    item8,
+    item9,
+    item10,
+    item11,
+    item12,
+  ];
 
-]
+  // render item components with props
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Shopping List</h1>
+      <ul className="space-y-4">
+        {items.map((item, index) => (
+          <Item
+            key={index}
+            name={item.name}
+            quantity={item.quantity}
+            category={item.category}
+          />
+        ))}
+      </ul>
+    </div>
+  );
+}

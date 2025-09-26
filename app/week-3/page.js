@@ -1,10 +1,9 @@
-import StudentInfo from "./item-list.js";
+import ItemList from "./item-list.js";
 
 export default function Page() {
   return (
-    <main>
-      <h1>Shopping List</h1>
-      <StudentInfo />
+    <main className="p-6 font-sans">
+      <ItemList />
     </main>
   );
 }

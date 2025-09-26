@@ -1,9 +1,9 @@
-const Item = ({ name, quantity, category }) => {
-    <li>
-        <div>
-            <p className="">{name}</p>
-            <p className="">Quantity: {quantity}</p>
-            <p className="">Category: {category}</p>
-        </div>
+export default function Item({ name, quantity, category }) {
+  return (
+    <li className="border border-gray-500 rounded-md p-4">
+      <p className="font-medium">{name}</p>
+      <p>Quantity: {quantity}</p>
+      <p>Category: {category}</p>
     </li>
+  );
 }
