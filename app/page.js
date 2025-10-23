@@ -21,33 +21,39 @@ export default function Home() {
         <div className="flex flex-col space-y-3 w-full">
           <Link
             href="/week-2"
-            className="font-black text-black bg-yellow-300 border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-yellow-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
+            className="font-black text-black border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-yellow-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
           >
             Go to Week 2
           </Link>
           <Link
             href="/week-3"
-            className="font-black text-black bg-lime-300 border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-lime-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
+            className="font-black text-black border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-lime-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
           >
             Go to Week 3
           </Link>
           <Link
             href="/week-4"
-            className="font-black text-black bg-pink-300 border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-pink-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
+            className="font-black text-black border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-pink-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
           >
             Go to Week 4
           </Link>
           <Link
             href="/week-5"
-            className="font-black text-black bg-sky-300 border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-sky-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
+            className="font-black text-black border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-sky-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
           >
             Go to Week 5
           </Link>
           <Link
             href="/week-6"
-            className="font-black text-black bg-orange-300 border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-orange-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
+            className="font-black text-black border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-orange-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
           >
             Go to Week 6
+          </Link>
+                    <Link
+            href="/week-7"
+            className="font-black text-black border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-orange-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
+          >
+            Go to Week 7
           </Link>
         </div>
       </div>
