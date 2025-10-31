@@ -99,7 +99,7 @@ export default function Field() {
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full px-4 py-2 border-4 border-black bg-white font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+              className="w-full px-4 py-2 border-4 border-black bg-lime font-black  shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
             >
               <option value="itemList">Produce</option>
               <option value="dairy">Dairy</option>
