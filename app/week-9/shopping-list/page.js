@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useUserAuth } from "../_utils/AuthContext";
+import { useUserAuth } from "../../contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
