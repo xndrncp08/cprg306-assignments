@@ -5,13 +5,13 @@ import { useState } from "react";
 export default function NewItem({ onAddItem }) {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
-  const [category, setCategory] = useState("Produce");
+  const [category, setCategory] = useState("produce");
 
   function handleSubmit(e) {
     e.preventDefault();
 
     const newItem = {
-      id: Date.now(),
+      id: Math.random().toString(36).slice(2, 10),
       name,
       quantity,
       category,
@@ -19,10 +19,9 @@ export default function NewItem({ onAddItem }) {
 
     onAddItem(newItem);
 
-    // reset
     setName("");
     setQuantity(1);
-    setCategory("Produce");
+    setCategory("produce");
   }
 
   return (
@@ -30,7 +29,9 @@ export default function NewItem({ onAddItem }) {
       onSubmit={handleSubmit}
       className="flex flex-col gap-4 p-6 mb-8 bg-white border-4 border-black rounded-none shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] w-[24rem]"
     >
-      <h2 className="text-xl font-black uppercase text-center text-black">Add New Item</h2>
+      <h2 className="text-xl font-black uppercase text-center text-black">
+        Add New Item
+      </h2>
 
       <label className="font-semibold text-black">
         Name:
@@ -62,14 +63,17 @@ export default function NewItem({ onAddItem }) {
           onChange={(e) => setCategory(e.target.value)}
           className="w-full mt-1 p-2 border-2 border-black focus:outline-none"
         >
-          <option>Produce</option>
-          <option>Dairy</option>
-          <option>Bakery</option>
-          <option>Pantry</option>
-          <option>Frozen Foods</option>
-          <option>Beverages</option>
-          <option>Snacks</option>
-          <option>Other</option>
+          <option value="produce">Produce</option>
+          <option value="dairy">Dairy</option>
+          <option value="bakery">Bakery</option>
+          <option value="meat">Meat</option>
+          <option value="frozen foods">Frozen Foods</option>
+          <option value="canned goods">Canned Goods</option>
+          <option value="dry goods">Dry Goods</option>
+          <option value="beverages">Beverages</option>
+          <option value="snacks">Snacks</option>
+          <option value="household">Household</option>
+          <option value="other">Other</option>
         </select>
       </label>
 
