@@ -69,6 +69,13 @@ export default function Home() {
           >
             Go to Week 9
           </Link>
+
+          <Link
+            href="/week-10"
+            className="font-black text-black border-4 border-black py-2 rounded-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-orange-200 active:translate-x-1 active:translate-y-1 active:shadow-none"
+          >
+            Go to Week 10
+          </Link>
         </div>
       </div>
     </main>
