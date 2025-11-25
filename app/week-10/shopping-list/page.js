@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import MealIdeas from "./meal-ideas";
-import { getItems, addItem } from "../_services/shopping-list-service";
+import { getItems, addItem } from "../../_services/shopping-list-service";
 
 export default function Page() {
   const { user } = useUserAuth();
@@ -15,10 +15,14 @@ export default function Page() {
   const [items, setItems] = useState([]);
   const [selectedItemName, setSelectedItemName] = useState("");
 
-  if (!user) {
-    router.push("/week-9");
-    return null;
-  }
+  useEffect(() => {
+    if (!user) {
+      router.push("/week-9");
+    }
+  }, [user, router]);
+
+  // prevent rendering while redirecting
+  if (!user) return null;
 
   async function loadItems() {
     const data = await getItems(user.uid);
@@ -34,16 +38,11 @@ export default function Page() {
     setItems((prev) => [...prev, { ...newItem, id }]);
   }
 
-function handleItemSelect(item) {
-  let name = item.name;
-  // remove emojis
-  name = name.replace(/\p{Emoji}/gu, "");
-  
-  // take only text before first comma
-  name = name.split(",")[0].trim();
-
-  setSelectedItemName(name);
-}
+  function handleItemSelect(item) {
+    let name = item.name.replace(/\p{Emoji}/gu, "");
+    name = name.split(",")[0].trim();
+    setSelectedItemName(name);
+  }
 
   return (
     <main className="flex flex-col items-center justify-start min-h-screen p-10 font-sans bg-gradient-to-br from-purple-200 via-pink-100 to-blue-200">
