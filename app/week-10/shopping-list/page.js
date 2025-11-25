@@ -34,17 +34,16 @@ export default function Page() {
     setItems((prev) => [...prev, { ...newItem, id }]);
   }
 
-  function handleItemSelect(item) {
-    const cleanedName = item.name
-      .replace(
-        /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
-        ""
-      )
-      .split(",")[0]
-      .trim();
+function handleItemSelect(item) {
+  let name = item.name;
+  // remove emojis
+  name = name.replace(/\p{Emoji}/gu, "");
+  
+  // take only text before first comma
+  name = name.split(",")[0].trim();
 
-    setSelectedItemName(cleanedName);
-  }
+  setSelectedItemName(name);
+}
 
   return (
     <main className="flex flex-col items-center justify-start min-h-screen p-10 font-sans bg-gradient-to-br from-purple-200 via-pink-100 to-blue-200">

@@ -44,7 +44,7 @@ export default function Page() {
               "3px 3px 0px #fbbf24, -2px -2px 0px #fbbf24, 2px -2px 0px #fbbf24, -2px 2px 0px #fbbf24",
           }}
         >
-          Week 9 Assignment
+          Week 10 Assignment
         </h1>
 
         {error && (
